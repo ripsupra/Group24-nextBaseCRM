@@ -1,5 +1,6 @@
 package com.nextBaseCRM.test.olesika;
 
+import com.nextBaseCRM.test.Adil.LogInMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,10 +18,8 @@ public class Test1 {
         driver.get("https://en.wikipedia.org/wiki/Santa_Claus");
         // almost
 
-       String gift = "good girl";
-       String noGift = "Nope this year";
-
-
+        String gift = "good girl";
+        String noGift = "Nope this year";
 
 
     }
