@@ -10,5 +10,7 @@ public class LogInCheck extends LogInMethod {
         check.logIn("marketing48@cybertekschool.com", "UserUser");
         check.logIn("hr47@cybertekschool.com", "UserUser");
         check.logIn("hr48@cybertekschool.com", "UserUser");
+
+
     }
 }
