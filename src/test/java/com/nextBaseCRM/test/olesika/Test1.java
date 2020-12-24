@@ -17,6 +17,9 @@ public class Test1 {
         driver.get("https://en.wikipedia.org/wiki/Santa_Claus");
         // almost
 
+       String gift = "good girl";
+       String noGift = "Nope this year";
+
 
 
 
