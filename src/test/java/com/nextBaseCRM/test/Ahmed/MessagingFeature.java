@@ -72,7 +72,7 @@ public class MessagingFeature {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://login.nextbasecrm.com/stream/");
+        driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
         Thread.sleep(2000);
         driver.findElement(By.name("USER_PASSWORD")).sendKeys(passWord);
