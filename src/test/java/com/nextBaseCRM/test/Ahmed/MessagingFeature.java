@@ -30,13 +30,12 @@ public class MessagingFeature {
         /*switching to the frame where we have the text editor can also be done by using the index number of the frame it works like an array
          the index number starts from 0. exp: driver.switchTo().frame(index number)*/
         driver.switchTo().frame(frame);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body")).sendKeys(message);
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.switchTo().parentFrame();
-        Thread.sleep(4000);
-        //driver.findElement(By.id("blog-submit-button-save")).click();
-        Thread.sleep(5000);
+        Thread.sleep(1000);
+        driver.findElement(By.id("blog-submit-button-save")).click();
         //driver.close();
 
 
@@ -73,7 +72,7 @@ public class MessagingFeature {
         driver.close();
     }
 
-    public static void attachLink(WebDriver driver,String userName, String link, String linkText) throws InterruptedException {
+    public static void attachLink(WebDriver driver, String userName, String link, String linkText) throws InterruptedException {
         driver.manage().window().maximize();
         driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
@@ -91,10 +90,11 @@ public class MessagingFeature {
         driver.findElement(By.id("linkidPostFormLHE_blogPostForm-href")).sendKeys(link);
         Thread.sleep(2000);
         driver.findElement(By.className("adm-btn-save")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.findElement(By.id("blog-submit-button-save")).click();
+        Thread.sleep(4000);
 
-        //driver.close();
+        driver.close();
     }
 
 
