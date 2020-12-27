@@ -21,7 +21,7 @@ public class MessagingFeature {
         String browser = input.next();
         WebDriver driver = WebDriverFactory.getDriver(browser);
         driver.manage().window().maximize();
-        driver.get("https://login.nextbasecrm.com/stream/");
+        driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
         Thread.sleep(2000);
         driver.findElement(By.name("USER_PASSWORD")).sendKeys(passWord);
@@ -52,7 +52,7 @@ public class MessagingFeature {
         String browser = input.next();
         WebDriver driver = WebDriverFactory.getDriver(browser);
         driver.manage().window().maximize();
-        driver.get("https://login.nextbasecrm.com/stream/");
+        driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
         Thread.sleep(2000);
         driver.findElement(By.name("USER_PASSWORD")).sendKeys(passWord);
