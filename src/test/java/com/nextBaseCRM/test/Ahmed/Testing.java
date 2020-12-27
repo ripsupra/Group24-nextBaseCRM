@@ -36,7 +36,7 @@ public class Testing {
         MessagingFeature.cancelMessage(loginHelpDesk2, "Testing cancel Helpdesk 48");
         MessagingFeature.cancelMessage(loginMark1, "Testing cancel Marketing 47");
         MessagingFeature.cancelMessage(loginMark2, "Testing cancel Marketing 48");
-        //Test Case #3 Attach a link for all users of group24
+        //Test Case #3 Attach a link for all users of group2400
         MessagingFeature.attachLink(loginHr1, "https://www.HelloWorld.com", "just a simple Link HR-47");
         MessagingFeature.attachLink(loginHr2, "https://www.HelloWorld.com", "just a simple Link HR-48");
         MessagingFeature.attachLink(loginHelpDesk1, "https://www.HelloWorld.com", "just a simple Link Helpdesk 47");
