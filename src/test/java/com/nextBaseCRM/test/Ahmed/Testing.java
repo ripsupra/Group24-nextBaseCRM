@@ -1,5 +1,6 @@
 package com.nextBaseCRM.test.Ahmed;
 
+import com.nextBaseCRM.test.utilities.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -8,13 +9,47 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.awt.*;
 import java.io.File;
+import java.util.Scanner;
 
 public class Testing {
-    public static void main(String[] args) throws InterruptedException {
-        MessagingFeature.sendMessage("helpdesk48@cybertekschool.com", "selenium Test");
-        MessagingFeature.cancelMessage("marketing47@cybertekschool.com", "Testing cancel");
-        MessagingFeature.attachLink("hr47@cybertekschool.com", "https://www.HelloWorld.com", "just a simple Link");
+    private static String loginHr1, loginHr2, loginHelpDesk1, loginHelpDesk2, loginMark1, loginMark2;
 
+    static {
+        loginHelpDesk1 = "helpdesk47@cybertekschool.com";
+        loginHelpDesk2 = "helpdesk48@cybertekschool.com";
+        loginMark1 = "marketing47@cybertekschool.com";
+        loginMark2 = "marketing47@cybertekschool.com";
+        loginHr1 = "hr47@cybertekschool.com";
+        loginHr2 = "hr48@cybertekschool.com";
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter the browser you want to use: ");
+        String browser = input.next();
+        WebDriver driver = WebDriverFactory.getDriver(browser);
+        input.close();
+        //Test Case #1 Sending a message with all users
+        MessagingFeature.sendMessage(driver, loginHr1, "selenium Test HR-47");
+        MessagingFeature.sendMessage(driver, loginHr2, "selenium Test HR-48");
+        MessagingFeature.sendMessage(driver, loginHelpDesk1, "selenium Test Helpdesk 47");
+        MessagingFeature.sendMessage(driver, loginHelpDesk2, "selenium Test Helpdesk 48");
+        MessagingFeature.sendMessage(driver, loginMark1, "selenium Test Marketing 47");
+        MessagingFeature.sendMessage(driver, loginMark2, "selenium Test Marketing 48");
+        //Test Case #2 Cancel message with all users
+        MessagingFeature.cancelMessage(driver, loginHr1, "Testing cancel HR-47");
+        MessagingFeature.cancelMessage(driver, loginHr2, "Testing cancel HR-48");
+        MessagingFeature.cancelMessage(driver, loginHelpDesk1, "Testing cancel Helpdesk 47");
+        MessagingFeature.cancelMessage(driver, loginHelpDesk2, "Testing cancel Helpdesk 48");
+        MessagingFeature.cancelMessage(driver, loginMark1, "Testing cancel Marketing 47");
+        MessagingFeature.cancelMessage(driver, loginMark2, "Testing cancel Marketing 48");
+        //Test Case #3 Attach a link for all users of group24
+        MessagingFeature.attachLink(driver, loginHr1, "https://cat-bounce.com/", "just a simple Link HR-47 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginHr2, "https://cat-bounce.com/", "just a simple Link HR-48 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginHelpDesk1, "https://cat-bounce.com/", "just a simple Link Helpdesk 47 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginHelpDesk2, "https://cat-bounce.com/", "just a simple Link Helpdesk 48 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginMark1, "https://cat-bounce.com/", "just a simple Link Marketing 47 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginMark2, "https://cat-bounce.com/", "just a simple Link Marketing 48 you must check it out!!!!!");
 
 
     }

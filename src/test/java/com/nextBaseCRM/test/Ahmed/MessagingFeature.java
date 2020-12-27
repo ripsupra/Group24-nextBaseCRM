@@ -1,21 +1,23 @@
 package com.nextBaseCRM.test.Ahmed;
 
+import com.nextBaseCRM.test.utilities.WebDriverFactory;
+import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.Scanner;
 
 public class MessagingFeature {
     public String userName, message, link;
     public static final String passWord = "UserUser";
 
-    public static void sendMessage(String userName, String message) throws InterruptedException {
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+    public static void sendMessage(WebDriver driver, String userName, String message) throws InterruptedException {
         driver.manage().window().maximize();
-        driver.get("https://login.nextbasecrm.com/stream/");
+        driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
         Thread.sleep(2000);
         driver.findElement(By.name("USER_PASSWORD")).sendKeys(passWord);
@@ -33,19 +35,17 @@ public class MessagingFeature {
         Thread.sleep(4000);
         driver.switchTo().parentFrame();
         Thread.sleep(4000);
-        driver.findElement(By.id("blog-submit-button-save"));
+        //driver.findElement(By.id("blog-submit-button-save")).click();
         Thread.sleep(5000);
-        driver.close();
+        //driver.close();
 
 
     }
 
-    public static void cancelMessage(String userName, String message) throws InterruptedException {
+    public static void cancelMessage(WebDriver driver, String userName, String message) throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://login.nextbasecrm.com/stream/");
+        driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
         Thread.sleep(2000);
         driver.findElement(By.name("USER_PASSWORD")).sendKeys(passWord);
@@ -62,15 +62,18 @@ public class MessagingFeature {
         driver.findElement(By.xpath("/html/body")).sendKeys(message);
         driver.switchTo().parentFrame();
         Thread.sleep(4000);
-        driver.findElement(By.id("blog-submit-button-cancel"));
+        driver.findElement(By.id("blog-submit-button-cancel")).click();
         Thread.sleep(4000);
+        driver.findElement(By.xpath("//*[@id='feed-add-post-form-tab-message']/span")).click();
+        driver.switchTo().frame(frame);
+        driver.findElement(By.xpath("/html/body")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        driver.findElement(By.xpath("/html/body")).sendKeys(Keys.chord(Keys.DELETE));
+        driver.switchTo().parentFrame();
+        driver.findElement(By.id("blog-submit-button-cancel")).click();
         driver.close();
     }
 
-    public static void attachLink(String userName, String link, String linkText) throws InterruptedException {
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+    public static void attachLink(WebDriver driver,String userName, String link, String linkText) throws InterruptedException {
         driver.manage().window().maximize();
         driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
@@ -89,7 +92,9 @@ public class MessagingFeature {
         Thread.sleep(2000);
         driver.findElement(By.className("adm-btn-save")).click();
         Thread.sleep(4000);
-        driver.close();
+        driver.findElement(By.id("blog-submit-button-save")).click();
+
+        //driver.close();
     }
 
 
