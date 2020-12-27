@@ -21,7 +21,7 @@ public class Testing {
     }
 
     public static void main(String[] args) throws InterruptedException {
-       /* //Test Case #1 Sending a message with all users
+       //Test Case #1 Sending a message with all users
         MessagingFeature.sendMessage(loginHr1, "selenium Test HR-47");
         MessagingFeature.sendMessage(loginHr2, "selenium Test HR-48");
         MessagingFeature.sendMessage(loginHelpDesk1, "selenium Test Helpdesk 47");
@@ -36,16 +36,16 @@ public class Testing {
         MessagingFeature.cancelMessage(loginMark1, "Testing cancel Marketing 47");
         MessagingFeature.cancelMessage(loginMark2, "Testing cancel Marketing 48");
         //Test Case #3 Attach a link for all users of group24
-        MessagingFeature.attachLink(loginHr1, "https://www.HelloWorld.com", "just a simple Link HR-47");
-        MessagingFeature.attachLink(loginHr2, "https://www.HelloWorld.com", "just a simple Link HR-48");
-        MessagingFeature.attachLink(loginHelpDesk1, "https://www.HelloWorld.com", "just a simple Link Helpdesk 47");
-        MessagingFeature.attachLink(loginHelpDesk2, "https://www.HelloWorld.com", "just a simple Link Helpdesk 48");
-        MessagingFeature.attachLink(loginMark1, "https://www.HelloWorld.com", "just a simple Link Marketing 47");
-        MessagingFeature.attachLink(loginMark2, "https://www.HelloWorld.com", "just a simple Link Marketing 48");
+        MessagingFeature.attachLink(loginHr1, "https://www.HelloWorld.com", "just a simple Link HR-47 you must check it out!!!!!");
+        MessagingFeature.attachLink(loginHr2, "https://www.HelloWorld.com", "just a simple Link HR-48 you must check it out!!!!!");
+        MessagingFeature.attachLink(loginHelpDesk1, "https://www.HelloWorld.com", "just a simple Link Helpdesk 47 you must check it out!!!!!");
+        MessagingFeature.attachLink(loginHelpDesk2, "https://www.HelloWorld.com", "just a simple Link Helpdesk 48 you must check it out!!!!!");
+        MessagingFeature.attachLink(loginMark1, "https://www.HelloWorld.com", "just a simple Link Marketing 47 you must check it out!!!!!");
+        MessagingFeature.attachLink(loginMark2, "https://www.HelloWorld.com", "just a simple Link Marketing 48 you must check it out!!!!!");
 
-*/
 
-        MessagingFeature.cancelMessage(loginHr1, "Testing cancel HR-47");
+
+
 
     }
 }

@@ -103,7 +103,9 @@ public class MessagingFeature {
         Thread.sleep(2000);
         driver.findElement(By.className("adm-btn-save")).click();
         Thread.sleep(4000);
-        driver.close();
+        driver.findElement(By.id("blog-submit-button-save")).click();
+
+        //driver.close();
     }
 
 
