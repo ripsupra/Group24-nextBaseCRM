@@ -44,12 +44,12 @@ public class Testing {
         MessagingFeature.cancelMessage(driver, loginMark1, "Testing cancel Marketing 47");
         MessagingFeature.cancelMessage(driver, loginMark2, "Testing cancel Marketing 48");
         //Test Case #3 Attach a link for all users of group24
-        MessagingFeature.attachLink(driver, loginHr1, "https://www.HelloWorld.com", "just a simple Link HR-47 you must check it out!!!!!");
-        MessagingFeature.attachLink(driver, loginHr2, "https://www.HelloWorld.com", "just a simple Link HR-48 you must check it out!!!!!");
-        MessagingFeature.attachLink(driver, loginHelpDesk1, "https://www.HelloWorld.com", "just a simple Link Helpdesk 47 you must check it out!!!!!");
-        MessagingFeature.attachLink(driver, loginHelpDesk2, "https://www.HelloWorld.com", "just a simple Link Helpdesk 48 you must check it out!!!!!");
-        MessagingFeature.attachLink(driver, loginMark1, "https://www.HelloWorld.com", "just a simple Link Marketing 47 you must check it out!!!!!");
-        MessagingFeature.attachLink(driver, loginMark2, "https://www.HelloWorld.com", "just a simple Link Marketing 48 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginHr1, "https://cat-bounce.com/", "just a simple Link HR-47 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginHr2, "https://cat-bounce.com/", "just a simple Link HR-48 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginHelpDesk1, "https://cat-bounce.com/", "just a simple Link Helpdesk 47 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginHelpDesk2, "https://cat-bounce.com/", "just a simple Link Helpdesk 48 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginMark1, "https://cat-bounce.com/", "just a simple Link Marketing 47 you must check it out!!!!!");
+        MessagingFeature.attachLink(driver, loginMark2, "https://cat-bounce.com/", "just a simple Link Marketing 48 you must check it out!!!!!");
 
 
     }
