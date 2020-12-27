@@ -21,7 +21,7 @@ public class Testing {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        //Test Case #1 Sending a message with all users
+       /* //Test Case #1 Sending a message with all users
         MessagingFeature.sendMessage(loginHr1, "selenium Test HR-47");
         MessagingFeature.sendMessage(loginHr2, "selenium Test HR-48");
         MessagingFeature.sendMessage(loginHelpDesk1, "selenium Test Helpdesk 47");
@@ -43,7 +43,9 @@ public class Testing {
         MessagingFeature.attachLink(loginMark1, "https://www.HelloWorld.com", "just a simple Link Marketing 47");
         MessagingFeature.attachLink(loginMark2, "https://www.HelloWorld.com", "just a simple Link Marketing 48");
 
+*/
 
+        MessagingFeature.cancelMessage(loginHr1, "Testing cancel HR-47");
 
     }
 }
