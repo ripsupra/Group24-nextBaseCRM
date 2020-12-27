@@ -1,19 +1,24 @@
 package com.nextBaseCRM.test.Ahmed;
 
+import com.nextBaseCRM.test.utilities.WebDriverFactory;
+import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.Scanner;
+
 public class MessagingFeature {
     public String userName, message, link;
     public static final String passWord = "UserUser";
 
     public static void sendMessage(String userName, String message) throws InterruptedException {
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter the browser you want to use: ");
+        String browser = input.next();
+        WebDriver driver = WebDriverFactory.getDriver(browser);
         driver.manage().window().maximize();
         driver.get("https://login.nextbasecrm.com/stream/");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
@@ -41,9 +46,10 @@ public class MessagingFeature {
     }
 
     public static void cancelMessage(String userName, String message) throws InterruptedException {
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter the browser you want to use: ");
+        String browser = input.next();
+        WebDriver driver = WebDriverFactory.getDriver(browser);
         driver.manage().window().maximize();
         driver.get("https://login.nextbasecrm.com/stream/");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
@@ -68,9 +74,10 @@ public class MessagingFeature {
     }
 
     public static void attachLink(String userName, String link, String linkText) throws InterruptedException {
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter the browser you want to use: ");
+        String browser = input.next();
+        WebDriver driver = WebDriverFactory.getDriver(browser);
         driver.manage().window().maximize();
         driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
