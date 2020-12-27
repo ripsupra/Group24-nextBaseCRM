@@ -36,7 +36,7 @@ public class MessagingFeature {
         driver.switchTo().parentFrame();
         Thread.sleep(1000);
         driver.findElement(By.id("blog-submit-button-save")).click();
-        //driver.close();
+        driver.close();
 
 
     }
