@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class AC_G24_118 extends AllMethods {
+public class AC_G24_118 extends Utility {
 
     public static void main(String[] args) throws InterruptedException {
 
