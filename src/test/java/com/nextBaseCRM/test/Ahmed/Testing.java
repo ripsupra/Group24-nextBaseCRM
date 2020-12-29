@@ -33,20 +33,20 @@ public class Testing {
         String browser = input.next();
 
         // Loop to send message using all the credentials
-       /* for (String eachUser : usersLogin) {
+        for (String eachUser : usersLogin) {
             WebDriver driver = WebDriverFactory.getDriver(browser);
             MessagingFeature.sendMessage(driver, eachUser, "selenium Test " + eachUser.substring(0, eachUser.indexOf('@')) + " using " + browser);
-        } */
+        }
         // Loop to test cancel message using all the credentials
         for (String eachUser : usersLogin) {
             WebDriver driver = WebDriverFactory.getDriver(browser);
             MessagingFeature.cancelMessage(driver, eachUser, "Testing cancel " + eachUser.substring(0, eachUser.indexOf('@')) + " using " + browser);
         }
         // Loop to attach a link and send it using all the credentials
-        /* for (String eachUser : usersLogin) {
+         for (String eachUser : usersLogin) {
             WebDriver driver = WebDriverFactory.getDriver(browser);
             MessagingFeature.attachLink(driver, eachUser, "https://cat-bounce.com/", "just a simple Link " + eachUser.substring(0, eachUser.indexOf('@')) + " using " + browser);
-        } */
+        }
 
 // just using the terminal for git
 
