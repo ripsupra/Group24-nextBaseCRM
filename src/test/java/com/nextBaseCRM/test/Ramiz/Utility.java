@@ -15,6 +15,7 @@ public class Utility {
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
         driver.get("https://login2.nextbasecrm.com/");
 
@@ -36,6 +37,12 @@ public class Utility {
         }
 
         System.out.println("User is"+select+" able to select The High Priority checkbox");
+
+        driver.findElement(By.xpath("//*[@id='user-block']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[@id='popup-window-content-menu-popup-user-menu']/div/div/a[3]/span[2]")).click();
+
+Thread.sleep(3000);
 
 
 
