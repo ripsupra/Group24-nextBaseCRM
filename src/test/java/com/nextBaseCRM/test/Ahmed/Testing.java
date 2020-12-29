@@ -15,19 +15,17 @@ import java.util.Scanner;
 
 public class Testing {
 
-    static {
-        String loginHelpDesk1 = "helpdesk47@cybertekschool.com";
-        String loginHelpDesk2 = "helpdesk48@cybertekschool.com";
-        String loginMark1 = "marketing47@cybertekschool.com";
-        String loginMark2 = "marketing47@cybertekschool.com";
-        String loginHr1 = "hr47@cybertekschool.com";
-        String loginHr2 = "hr48@cybertekschool.com";
-    }
-
-
     public static void main(String[] args) throws InterruptedException {
-        ArrayList<String> usersLogin = new ArrayList<String>(Arrays.asList("helpdesk47@cybertekschool.com", "helpdesk48@cybertekschool.com", "marketing47@cybertekschool.com",
-                "marketing47@cybertekschool.com", "hr47@cybertekschool.com", "hr48@cybertekschool.com"));
+
+        ArrayList<String> usersLogin = new ArrayList<String>(Arrays.asList(
+                "helpdesk47@cybertekschool.com",
+                "helpdesk48@cybertekschool.com",
+                "marketing47@cybertekschool.com",
+                "marketing48@cybertekschool.com",
+                "hr47@cybertekschool.com",
+                "hr48@cybertekschool.com"
+        ));
+
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter the browser you want to use: ");
         String browser = input.next();
