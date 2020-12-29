@@ -16,6 +16,7 @@ public class MessagingFeature {
     public static final String passWord = "UserUser";
 
     public static void sendMessage(WebDriver driver, String userName, String message) throws InterruptedException {
+
         driver.manage().window().maximize();
         driver.get("https://qa.nextbasecrm.com/stream/?login=yes");
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
@@ -57,17 +58,13 @@ public class MessagingFeature {
         /*switching to the frame where we have the text editor can also be done by using the index number of the frame it works like an array
          the index number starts from 0. exp: driver.switchTo().frame(index number)*/
         driver.switchTo().frame(frame);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body")).sendKeys(message);
-        driver.switchTo().parentFrame();
-        Thread.sleep(4000);
-        driver.findElement(By.id("blog-submit-button-cancel")).click();
-        Thread.sleep(4000);
-        driver.findElement(By.xpath("//*[@id='feed-add-post-form-tab-message']/span")).click();
-        driver.switchTo().frame(frame);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
         driver.findElement(By.xpath("/html/body")).sendKeys(Keys.chord(Keys.DELETE));
         driver.switchTo().parentFrame();
+        Thread.sleep(1000);
         driver.findElement(By.id("blog-submit-button-cancel")).click();
         driver.close();
     }
