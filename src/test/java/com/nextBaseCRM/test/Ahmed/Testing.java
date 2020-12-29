@@ -69,7 +69,7 @@ public class Testing {
         MessagingFeature.attachLink(driver, loginMark1, "https://cat-bounce.com/", "just a simple Link Marketing 47 you must check it out!!!!! using "+browser);
         MessagingFeature.attachLink(driver, loginMark2, "https://cat-bounce.com/", "just a simple Link Marketing 48 you must check it out!!!!! using "+browser);
 */
-
+// just using the terminal for git
 
     }
 }
