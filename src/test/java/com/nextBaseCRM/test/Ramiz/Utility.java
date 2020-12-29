@@ -17,7 +17,7 @@ public class Utility {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        driver.get("https://login2.nextbasecrm.com/");
+        driver.get("https://qa.nextbasecrm.com/");
 
         driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
 
