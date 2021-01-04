@@ -1,15 +1,12 @@
 package com.nextBaseCRM.test.Ramiz;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class AC_G24_118 extends Utility {
-
+public class AC_G24_119 extends Utility {
     public static void main(String[] args) throws InterruptedException {
 
-        AC_G24_118 driver = new AC_G24_118();
-
+        AC_G24_119 driver = new AC_G24_119();
         ArrayList<String> userName = new ArrayList<String>();
         userName.addAll(Arrays.asList(
                 "helpdesk47@cybertekschool.com",
@@ -20,17 +17,11 @@ public class AC_G24_118 extends Utility {
                 "hr48@cybertekschool.com"
         ));
 
-for( String each: userName){
-    driver.highPriority(each);
+        for( String each: userName){
+            driver.checkList(each, "selam nasilsin");
 
 
-}
-
-
-
+        }
     }
 
-
 }
-
-
