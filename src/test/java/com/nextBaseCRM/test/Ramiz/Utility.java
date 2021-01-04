@@ -95,4 +95,31 @@ driver.close();
 
     }
 
+
+    public void datePicker(String userName) throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+
+        driver.get("https://qa.nextbasecrm.com/");
+
+        driver.findElement(By.name("USER_LOGIN")).sendKeys(userName);
+
+        driver.findElement(By.name("USER_PASSWORD")).sendKeys("UserUser");
+        driver.findElement(By.className("login-btn")).click();
+
+
+
+        driver.findElement(By.id("feed-add-post-form-tab-tasks")).click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//*[@id='bx-component-scope-lifefeed_task_form']/div/div[3]/div[2]/div/div[1]/span[1]/span/input[1]")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//a[@data-date='1609718400000']")).click();
+        driver.findElement(By.xpath("//span[.='Select']")).click();
+        Thread.sleep(2000);
+        driver.close();
+    }
+
 }
