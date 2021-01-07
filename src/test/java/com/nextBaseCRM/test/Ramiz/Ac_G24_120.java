@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Ac_G24_120 extends Utility{
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
 
         AC_G24_119 driver = new AC_G24_119();
         ArrayList<String> userName = new ArrayList<String>();

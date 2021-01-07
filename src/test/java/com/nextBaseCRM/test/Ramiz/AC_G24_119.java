@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AC_G24_119 extends Utility {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
 
         AC_G24_119 driver = new AC_G24_119();
         ArrayList<String> userName = new ArrayList<String>();
@@ -18,7 +18,7 @@ public class AC_G24_119 extends Utility {
         ));
 
         for( String each: userName){
-            driver.checkList(each, "selam nasilsin");
+            driver.checkList(each, "Hello Mello Yello");
 
 
         }
