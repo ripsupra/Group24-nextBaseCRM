@@ -49,11 +49,13 @@ public class Selenium_HomeWork {
         } else {
             System.out.println("Verification delete button Failed!!!");
         }
+       // System.out.println(driver.findElement(By.xpath("//div[@id='elements']")).getText());
+
         // 5. Click to “Delete” button.
         deleteButton.click();
         timeWait(3);
         // 6. Verify “Delete” button is NOT displayed after clicking.
-        if (driver.findElement(By.xpath("//div[@id='elements']")).isDisplayed()) {
+        if (!driver.findElement(By.xpath("//div[@id='elements']")).getText().contains("Delete")) {
             System.out.println("Verification delete button not displayed after click Passed!!!");
         } else {
             System.out.println("Verification delete button not displayed after click Failed!!!");
@@ -101,7 +103,7 @@ public class Selenium_HomeWork {
             timeWait(1);
         }
         //  6. Verify “Delete” button is NOT displayed after clicking.
-        if (driver.findElement(By.xpath("//div[@id='elements']")).isDisplayed()) {
+        if (!driver.findElement(By.xpath("//div[@id='elements']")).getText().contains("Delete")) {
             System.out.println("Verification delete button not displayed after clicked all delete button Passed!!!");
         } else {
             System.out.println("Verification delete button not displayed after clicked all delete button Failed!!!");
