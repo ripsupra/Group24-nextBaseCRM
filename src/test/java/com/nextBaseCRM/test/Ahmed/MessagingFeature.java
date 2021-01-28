@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 
 import java.util.Scanner;
 
@@ -27,6 +28,7 @@ public class MessagingFeature {
 
         driver.findElement(By.xpath("//*[@id='feed-add-post-form-tab-message']/span")).click();
         Thread.sleep(2000);
+
         WebElement frame = driver.findElement(By.xpath("//*[@id='bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm']/iframe"));
         /*switching to the frame where we have the text editor can also be done by using the index number of the frame it works like an array
          the index number starts from 0. exp: driver.switchTo().frame(index number)*/
@@ -39,6 +41,7 @@ public class MessagingFeature {
         driver.findElement(By.id("blog-submit-button-save")).click();
         Thread.sleep(2000);
         driver.close();
+
 
 
     }
@@ -59,12 +62,12 @@ public class MessagingFeature {
         /*switching to the frame where we have the text editor can also be done by using the index number of the frame it works like an array
          the index number starts from 0. exp: driver.switchTo().frame(index number)*/
         driver.switchTo().frame(frame);
-
         driver.findElement(By.xpath("/html/body")).sendKeys(message);
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
         driver.findElement(By.xpath("/html/body")).sendKeys(Keys.chord(Keys.DELETE));
         driver.switchTo().parentFrame();
+
 
         driver.findElement(By.id("blog-submit-button-cancel")).click();
         driver.close();
