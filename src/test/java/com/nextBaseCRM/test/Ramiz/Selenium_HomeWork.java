@@ -14,7 +14,7 @@ public class Selenium_HomeWork {
 
         deleteButton();
 
-        T3();
+       // T3();
 
     }
 
