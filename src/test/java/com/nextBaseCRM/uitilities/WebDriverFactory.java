@@ -16,7 +16,7 @@ public class WebDriverFactory {
 
             return new FirefoxDriver();
         }else{
-            System.out.println("Given browser type does not exist. Driver = null!");
+            System.out.println("Given  browser type does not exist. Driver = null!");
             return null;
         }
     }
