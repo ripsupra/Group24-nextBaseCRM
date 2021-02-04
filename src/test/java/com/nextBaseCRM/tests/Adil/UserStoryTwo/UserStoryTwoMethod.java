@@ -22,8 +22,7 @@ public class UserStoryTwoMethod {
         driver.findElement(By.id("microoPostFormLHE_blogPostForm_inner")).click();
         Thread.sleep(2000);
 
-
-
+        driver.quit();
     }
 
     public void cancelMessage(String username, String password) throws InterruptedException {
@@ -41,6 +40,8 @@ public class UserStoryTwoMethod {
         driver.findElement(By.id("microoPostFormLHE_blogPostForm_inner")).click();
         Thread.sleep(1000);
         driver.findElement(By.id("blog-submit-button-cancel")).click();
+
+        driver.quit();
 
     }
 
@@ -63,7 +64,7 @@ public class UserStoryTwoMethod {
         driver.findElement(By.id("linkidPostFormLHE_blogPostForm-href")).sendKeys(link);
         driver.findElement(By.className("adm-btn-save")).click();
 
-
+        driver.quit();
     }
 
 }
