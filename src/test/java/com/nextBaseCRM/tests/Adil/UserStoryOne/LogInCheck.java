@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.Adil.UserStoryOne;
+package com.nextBaseCRM.tests.Adil.UserStoryOne;
 
 public class LogInCheck extends UserStoryOneMethod {
     public static void main(String[] args)  {

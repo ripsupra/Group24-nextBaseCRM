@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.Azad;
+package com.nextBaseCRM.tests.Azad;
 
 public class Test1 {
     public static void main(String[] args) {

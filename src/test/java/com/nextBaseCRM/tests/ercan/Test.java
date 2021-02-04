@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.ercan;
+package com.nextBaseCRM.tests.ercan;
 
 public class Test {
 

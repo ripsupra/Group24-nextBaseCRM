@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.olesika;
+package com.nextBaseCRM.tests.olesika;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;

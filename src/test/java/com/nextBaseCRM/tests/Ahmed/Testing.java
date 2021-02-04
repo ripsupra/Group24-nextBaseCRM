@@ -1,14 +1,4 @@
-package com.nextBaseCRM.test.Ahmed;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.awt.*;
-import java.io.File;
-import java.util.Scanner;
+package com.nextBaseCRM.tests.Ahmed;
 
 public class Testing {
     private static String loginHr1, loginHr2, loginHelpDesk1, loginHelpDesk2, loginMark1, loginMark2;

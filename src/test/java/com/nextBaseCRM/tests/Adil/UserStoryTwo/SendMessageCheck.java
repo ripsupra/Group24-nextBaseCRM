@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.Adil.UserStoryTwo;
+package com.nextBaseCRM.tests.Adil.UserStoryTwo;
 
 public class SendMessageCheck extends UserStoryTwoMethod {
     public static void main(String[] args) throws InterruptedException {

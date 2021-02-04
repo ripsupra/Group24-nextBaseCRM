@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.Irina;
+package com.nextBaseCRM.tests.Irina;
 
 public class Test {
 

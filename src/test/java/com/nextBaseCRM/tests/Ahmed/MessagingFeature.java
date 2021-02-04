@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.Ahmed;
+package com.nextBaseCRM.tests.Ahmed;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

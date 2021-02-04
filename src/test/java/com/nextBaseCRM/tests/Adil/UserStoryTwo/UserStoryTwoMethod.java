@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.Adil.UserStoryTwo;
+package com.nextBaseCRM.tests.Adil.UserStoryTwo;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;

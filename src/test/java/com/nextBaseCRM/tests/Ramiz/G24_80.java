@@ -1,4 +1,4 @@
-package com.nextBaseCRM.test.Ramiz;
+package com.nextBaseCRM.tests.Ramiz;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
